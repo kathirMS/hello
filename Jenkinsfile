@@ -11,4 +11,7 @@ node {
             } 
                 echo "Trying to Push Docker Build to DockerHub"
     }
+    stage('Gmail'){
+      emailext body: 'Hai kathir successfully deployed the application', subject: 'From Jenkins', to: 'kathirvelmuthusamy96@gmail.com'
+    }
 }

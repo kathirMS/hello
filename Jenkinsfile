@@ -1,19 +1,7 @@
 node {
-    def app
-
-    stage('Clone repository') {
-        /* Cloning the Repository to our Workspace */
-
-        checkout scm
-    }
-
-    stage('Build image') {
-        /* This builds the actual image */
-
-        app = docker.build("6383943367/build1")
-    }
-
+    
     stage('Push image') {
+              def app = docker.build("6383943367/build1")
         /* 
 			You would need to first register with DockerHub before you can push images to your account
 		*/

@@ -1,7 +1,8 @@
 
 pipeline{
     agent any
-
+    
+   stages{
     stage('Clone repository') {
         /* Cloning the Repository to our Workspace */
 
@@ -31,4 +32,5 @@ pipeline{
             } 
                 echo "Trying to Push Docker Build to DockerHub"
     }
+  }   
 }

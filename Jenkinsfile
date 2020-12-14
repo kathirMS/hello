@@ -2,6 +2,7 @@
 pipeline {
    agent any 
     stages {
+     stage{
       steps {
          def app = docker.build("6383943367/build1")
          
@@ -12,5 +13,7 @@ pipeline {
                 echo "Trying to Push Docker Build to DockerHub"
         
       }
+      }
     }
+    
 }

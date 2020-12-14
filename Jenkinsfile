@@ -4,7 +4,6 @@ pipeline {
     stages {
      stage("docker push") {
      
-      steps {
          def app = docker.build("6383943367/build1")
          
             docker.withRegistry('https://registry.hub.docker.com', '89933921-ac8e-41a0-89be-0e6d70af41bd') {
@@ -15,6 +14,8 @@ pipeline {
         
       }
       }
-    }
+    
     
 }
+
+ 

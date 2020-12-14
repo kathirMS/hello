@@ -2,7 +2,8 @@
 pipeline {
    agent any 
     stages {
-     stage{
+     stage("docker push") {
+     
       steps {
          def app = docker.build("6383943367/build1")
          
